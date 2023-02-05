@@ -1,0 +1,27 @@
+<apex:page standardController="Lead" lightningStylesheets="true" sidebar="false">
+    <div  style="padding:auto; width:700px; margin:auto" display="block" >
+        <apex:form>
+            <div> <br/>
+                <div style="background-color:black; padding:auto; margin:auto; border:auto" display="block"  >
+                    <apex:image id="landingimg" url="{!$Resource.Landingpagephoto}" style="width:700px" />                   
+                    <apex:image id="logo" url="{!$Resource.logo_CW}"   style="object-fit:cover"/>   
+                    <div style="background-color:red"> <b> &nbsp; Be our guest on Salesforce Info Session Webinar</b>
+                    </div>
+                </div>
+                <apex:pageBlock title="Joseph Consulting" mode="detail" >
+                    <apex:pageBlockButtons >
+                        <apex:commandButton action="{!save}" value="Save"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Ucretsiz Webinar Kayit Formu" columns="2">
+                        <apex:inputField label="First Name"   value="{!Lead.FirstName}" style=""/><br/>
+                        <apex:inputField label="Last Name"  value="{!Lead.LastName}"/><br/>
+                        <apex:inputField label="Phone" value="{!Lead.Phone}"/><br/>
+                        <apex:inputField label="Company" value="{!Lead.Company}"/><br/>
+                        <apex:inputField label="Email" value="{!Lead.Email}"/><br/>    
+                        <apex:outputLabel style="color:darkred " >*Bilgilerinizi gondermek ve Webinara katilmak icin lutfen Save tusuna basiniz.</apex:outputLabel><br/>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>          
+            </div>
+        </apex:form> 
+    </div>
+</apex:page>
